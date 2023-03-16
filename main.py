@@ -1,12 +1,13 @@
 import sys
-T=int(input())
+N=int(input())
 a=[]
-b=[]
-for i in range(T):
-    A,B=map(int,sys.stdin.readline().split())
-    a.append(A)
-    b.append(B)
+count=0
 
-for i in range(T):
-    print(a[i]+b[i])
+a=map(int,sys.stdin.readline().split())
+v=int(input())
+a=list(a)
 
+for i in range(0,N):
+    if(a[i]==v):
+        count+=1
+print(count)
