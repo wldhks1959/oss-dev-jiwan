@@ -1,13 +1,38 @@
-import sys
-N=int(input())
-a=[]
-count=0
+c = [[0] * 15 for i in range(5)] # 한 열이 15인 리스트를 5행으로 만든다.
+for i in range(5):
+    d = list(input())
+    d_len = len(d)
+    for j in range(d_len):
+        c[i][j] = d[j]
 
-a=map(int,sys.stdin.readline().split())
-v=int(input())
-a=list(a)
+for i in range(15):
+    for j in range(5):
+        if c[j][i] == 0: #c[j][i]가 공백이라면 계속 진행
+            continue;
+        else:
+            print(c[j][i], end='')
 
-for i in range(0,N):
-    if(a[i]==v):
-        count+=1
-print(count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
