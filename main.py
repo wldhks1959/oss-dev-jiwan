@@ -1,38 +1,15 @@
-c = [[0] * 15 for i in range(5)] # 한 열이 15인 리스트를 5행으로 만든다.
-for i in range(5):
-    d = list(input())
-    d_len = len(d)
-    for j in range(d_len):
-        c[i][j] = d[j]
+chess=[]
+chess=[input() for _ in range(8)] # 8열로 8행을 만든다.
+w_cnt=0
 
-for i in range(15):
-    for j in range(5):
-        if c[j][i] == 0: #c[j][i]가 공백이라면 계속 진행
-            continue;
-        else:
-            print(c[j][i], end='')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for a in range(len(chess)):
+    for b in  range(len(chess)):
+        if a==0 or a%2==0: # 짝수열
+            if b%2==0: # 짝수행
+                if chess[a][b] != '.':
+                    w_cnt += 1
+        else: #홀수열
+            if b!=0 and b%2==1: #홀수행
+                if chess[a][b] != '.':
+                    w_cnt += 1
+print(w_cnt)
