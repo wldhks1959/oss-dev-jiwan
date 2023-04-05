@@ -1,0 +1,15 @@
+N=int(input())
+cnt=0
+
+lis=input().split()
+for i in range(len(lis)):
+    a = []
+    for j in range(int(lis[i])):
+        if int(lis[i])%(j+1)==0:
+            a.append(lis[i]) # lis[i]값을 a에 삽입
+
+    if len(a) == 2 : # 소수라면
+        cnt+=1
+print(cnt)
+
+
